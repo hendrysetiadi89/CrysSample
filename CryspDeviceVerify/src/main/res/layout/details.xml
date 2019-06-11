@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#f4f4f4"
+    android:fillViewport="false"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="#f4f4f4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contextResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="35dp"
+            android:drawableLeft="@drawable/ic_result"
+
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="Context Verification Result"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/contextResult"
+            android:layout_marginTop="-2dp"
+            android:background="#B0BEBEBE" />
+
+        <LinearLayout
+            android:id="@+id/T1R1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contextResult"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R1_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Context Result" />
+
+            <TextView
+                android:id="@+id/T1R1_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="PASS" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/T1R2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/T1R1"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R2_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Device Match" />
+
+            <ImageView
+                android:id="@+id/T1R2_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:capitalize="characters"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/yes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/T1R3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/T1R2"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R3_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Device Rooted" />
+
+            <ImageView
+                android:id="@+id/T1R3_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:capitalize="characters"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/locked" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/T1R4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/T1R3"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R4_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Location Match" />
+
+            <ImageView
+                android:id="@+id/T1R4_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:capitalize="characters"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/no" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/T1R5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/T1R4"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R5_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/T1R5_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="San Francisco, US" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/T1R6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/T1R5"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/T1R6_Name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="0.75"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Velocity Check" />
+
+            <TextView
+                android:id="@+id/T1R6_Value"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="PASS" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+        applicationId "com.crysp.deviceverify"
+        versionCode 2
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    allprojects {
+        repositories {
+            maven {
+                url 'https://maven.google.com/'
+                name 'Google'
+            }
+
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':CryspSDK')
+    api 'com.google.android.gms:play-services-location:16.0.0'
+    api 'com.github.johnkil.android-appmsg:appmsg:1.2.0'
+    api 'com.squareup.okhttp3:okhttp:3.11.0'
+    api 'commons-codec:commons-codec:1.10'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation("com.squareup.okhttp3:okhttp:3.12.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:3.12.1")
+}
+
+
